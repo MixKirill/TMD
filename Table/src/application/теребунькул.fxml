@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="211.0" prefWidth="555.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Main">
+   <children>
+      <Button fx:id="btn" layoutX="252.0" layoutY="154.0" mnemonicParsing="false" text="Далее" />
+      <Label layoutX="93.0" layoutY="43.0" text="Задайте количсетво альтернатив" />
+      <Label layoutX="93.0" layoutY="89.0" text="Задайте количество критериев" />
+      <TextField fx:id="txt1" layoutX="315.0" layoutY="39.0" />
+      <TextField layoutX="315.0" layoutY="85.0" />
+   </children>
+</Pane>
