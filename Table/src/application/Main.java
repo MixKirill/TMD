@@ -42,20 +42,25 @@ public class Main extends Application {
 	}
 	
 	public void umnichka(){
-
-		System.out.println(txt1.getText());
-		System.out.println(txt2.getText());
+		int t1 = 0;
+		int t2 = 0;
+		//System.out.println(txt1.getText());
+		//System.out.println(txt2.getText());
 		 try
 	        {
-			 	int t1 = Integer.parseInt(txt1.getText());
-				int t2 = Integer.parseInt(txt2.getText());
+			 	lb.setText("");	
+			 	 t1 = Integer.parseInt(txt1.getText());
+				 t2 = Integer.parseInt(txt2.getText());
+	       
 	        }
 	        catch (NumberFormatException e)
 	        {
-	        	System.out.println("fsasf");
-	        	lb.setText("asfasfasf");
+	        	
+	        	lb.setText("Проверьте правильность ввода данных");
 	        }
-
+		 		if(t1<=0||t2<=0){
+		 			lb.setText("Проверьте правильность ввода данных");
+		 		}
 		
 	}
 	
@@ -63,7 +68,8 @@ public class Main extends Application {
 	public void initialize() {
 		btn.setOnAction (new EventHandler<ActionEvent>(){
 			public void handle(ActionEvent event){
-				umnichka();	
+				umnichka();
+				
 			}
 		});
 		
