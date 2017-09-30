@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -24,22 +25,30 @@ public class Main extends Application {
 	private TextField txt1; 
 	@FXML
 	private TextField txt2;
+	@FXML
+	private Label lb;
 	public void start(Stage stage) {
 		this.stage = stage;
 		try {
-			pane = (Pane) FXMLLoader.load(Main.class.getResource(".fxml"));
+			pane = (Pane) FXMLLoader.load(Main.class.getResource("теребунькул.fxml"));
 			
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
 		scene = new Scene(pane, 555, 211);
 		stage.setScene(scene);
-		
+	
 		stage.show();
 	}
 	
 	public void umnichka(){
-		txt1.getText();
+		try{
+		int t1=Integer.parseInt(txt1.getText());
+		int t2=Integer.parseInt(txt2.getText());
+		System.out.println(t1+t2);
+		}catch(Exception ex){
+			lb.setText("Проверьте ");
+		}
 		
 	}
 	
