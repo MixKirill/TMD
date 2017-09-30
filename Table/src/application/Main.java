@@ -1,8 +1,6 @@
 package application;
 
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -15,11 +13,8 @@ import javafx.stage.Stage;
 public class Main extends Application {
 
 	protected static Stage stage;
-	private Scene scene;
-	private Pane pane;
-	private Stage stage2;
-	private Scene scene2;
-	private Pane pane2;
+	protected static Scene scene;
+	protected Pane pane;
 
 	@FXML
 	private Button btn;
@@ -32,28 +27,33 @@ public class Main extends Application {
 
 	public void start(Stage primaryStage) {
 		
+		stage = primaryStage;
+
 		txt1 = new TextField();
 		txt2 = new TextField();
 		lb = new Label();
-		
-		stage = primaryStage;
-		
-		System.out.println(stage);
-		
+
 		try {
 			pane = (Pane) FXMLLoader.load(Main.class.getResource("теребунькул.fxml"));
 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		scene = new Scene(pane, 555, 211);		
 		
+		scene = new Scene(pane, 555, 211);
+
 		stage.setScene(scene);
 		stage.show();
 		
 	}
+	
+	@FXML
+	public void btnAction() {
+		umnichka();
+	}
 
 	public void umnichka() {
+		
 		int t1 = 0;
 		int t2 = 0;
 
@@ -72,25 +72,14 @@ public class Main extends Application {
 			lb.setText("Проверьте правильность ввода данных");
 			return;
 		}
-		
-		CreateTable n = new CreateTable();
-		n.create();
 
-	}
+		CreateTable.create();
 
-	@FXML
-	public void initialize() {
-		btn.setOnAction(new EventHandler<ActionEvent>() {
-			public void handle(ActionEvent event) {
-				umnichka();
-
-			}
-		});
-
-	}
+	}	
 
 	public static void main(String[] args) {
 		launch(args);
-		
+
 	}
+
 }
