@@ -1,23 +1,40 @@
 package application;
 	
 import javafx.application.Application;
-import javafx.stage.Stage;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.layout.BorderPane;
+import javafx.scene.control.Button;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 
 public class Main extends Application {
-	@Override
+	
+	private Stage stage;
+	private Scene scene;
+	private AnchorPane pane;
+	
+	@FXML
+	private Button btn;
+	
 	public void start(Stage primaryStage) {
+		this.stage = stage;
 		try {
-			BorderPane root = new BorderPane();
-			Scene scene = new Scene(root,400,400);
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			primaryStage.setScene(scene);
-			primaryStage.show();
+			pane = (AnchorPane) FXMLLoader.load(Main.class.getResource(arg0));
+			
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
+		scene = new Scene(pane, 640, 480);
+		stage.setScene(scene);
+		stage.se
+		stage.show();
+	}
+	
+	@FXML
+	public void initialize() {
+		
 	}
 	
 	public static void main(String[] args) {
