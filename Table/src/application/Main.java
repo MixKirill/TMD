@@ -37,12 +37,11 @@ public class Main extends Application {
 		}
 		scene = new Scene(pane, 555, 211);
 		stage.setScene(scene);
-	
-		stage.show();
+		stage.show();cerf
 	}
 	
 	public void umnichka(){
-		try{
+		try{ 
 		int t1=Integer.parseInt(txt1.getText());
 		int t2=Integer.parseInt(txt2.getText());
 		System.out.println(t1+t2);
