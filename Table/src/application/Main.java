@@ -22,11 +22,12 @@ public class Main extends Application {
 	@FXML
 	private Button btn;
 	@FXML
-	private TextField txt1; 
+	private TextField txt1 = new TextField(); 
 	@FXML
-	private TextField txt2;
+	private TextField txt2 = new TextField(); 
 	@FXML
-	private Label lb;
+	private Label lb = new Label();
+	
 	public void start(Stage stage) {
 		this.stage = stage;
 		try {
@@ -37,17 +38,24 @@ public class Main extends Application {
 		}
 		scene = new Scene(pane, 555, 211);
 		stage.setScene(scene);
-		stage.show();cerf
+		stage.show();
 	}
 	
 	public void umnichka(){
-		try{ 
-		int t1=Integer.parseInt(txt1.getText());
-		int t2=Integer.parseInt(txt2.getText());
-		System.out.println(t1+t2);
-		}catch(Exception ex){
-			lb.setText("Проверьте ");
-		}
+
+		System.out.println(txt1.getText());
+		System.out.println(txt2.getText());
+		 try
+	        {
+			 	int t1 = Integer.parseInt(txt1.getText());
+				int t2 = Integer.parseInt(txt2.getText());
+	        }
+	        catch (NumberFormatException e)
+	        {
+	        	System.out.println("fsasf");
+	        	lb.setText("asfasfasf");
+	        }
+
 		
 	}
 	
@@ -58,6 +66,8 @@ public class Main extends Application {
 				umnichka();	
 			}
 		});
+		
+		
 		
 	}
 	public static void main(String[] args) {

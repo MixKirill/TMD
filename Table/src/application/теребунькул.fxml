@@ -10,6 +10,7 @@
       <Label layoutX="93.0" layoutY="43.0" text="Задайте количсетво альтернатив" />
       <Label layoutX="93.0" layoutY="89.0" text="Задайте количество критериев" />
       <TextField fx:id="txt1" layoutX="315.0" layoutY="39.0" />
-      <TextField layoutX="315.0" layoutY="85.0" />
+      <TextField fx:id="txt2" layoutX="315.0" layoutY="85.0" />
+      <Label fx:id="lb" layoutX="184.0" layoutY="126.0" prefHeight="17.0" prefWidth="220.0" />
    </children>
 </Pane>
