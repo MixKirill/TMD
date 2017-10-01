@@ -37,7 +37,7 @@ public class Main extends Application {
 			pane = (AnchorPane) FXMLLoader.load(Main.class.getResource("теребунькул.fxml"));
 
 		} catch (Exception e) {
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		
 		scene = new Scene(pane);
