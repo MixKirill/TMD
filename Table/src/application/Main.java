@@ -40,7 +40,7 @@ public class Main extends Application {
 			e.printStackTrace();
 		}
 		
-		scene = new Scene(pane, 555, 211);
+		scene = new Scene(pane, 680, 211);
 
 		stage.setTitle("TMD");
 		stage.setScene(scene);
