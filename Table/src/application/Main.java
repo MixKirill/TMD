@@ -7,14 +7,14 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.Pane;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 public class Main extends Application {
 
 	protected static Stage stage;
 	protected static Scene scene;
-	protected Pane pane;
+	protected AnchorPane pane;
 
 	@FXML
 	private Button btn;
@@ -34,15 +34,18 @@ public class Main extends Application {
 		lb = new Label();
 
 		try {
-			pane = (Pane) FXMLLoader.load(Main.class.getResource("теребунькул.fxml"));
+			pane = (AnchorPane) FXMLLoader.load(Main.class.getResource("теребунькул.fxml"));
 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		
-		scene = new Scene(pane, 680, 211);
+		scene = new Scene(pane);
 
+		
 		stage.setTitle("TMD");
+		stage.setMinHeight(600);
+		stage.setMinWidth(400);
 		stage.setScene(scene);
 		stage.show();
 		
