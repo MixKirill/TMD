@@ -42,6 +42,7 @@ public class Main extends Application {
 		
 		scene = new Scene(pane, 555, 211);
 
+		stage.setTitle("TMD");
 		stage.setScene(scene);
 		stage.show();
 		
